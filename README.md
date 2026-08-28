@@ -8,4 +8,4 @@ Unified platform combining:
 ## Stack
 - Backend: FastAPI, LangChain, OpenAI/Claude, FAISS/Pinecone, Redis/ChromaDB
 - Frontend: React
-- Deploy: Docker, Vercel
+- Deploy: Docker, Verceltest change for PR review
