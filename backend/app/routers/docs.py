@@ -70,8 +70,20 @@ async def query_docs(request: QueryRequest):
 
     context = "\n\n".join([doc.page_content for doc in results])
 
+    prompt = f"""Answer the question using ONLY the context below.
+If the answer isn't in the context, say "I couldn't find that in the document."
+
+Context:
+{context}
+
+Question: {request.question}
+
+Answer:"""
+
+    response = llm.invoke(prompt)
+
     return {
         "question": request.question,
-        "matched_chunks": len(results),
-        "context": context
+        "answer": response.content,
+        "matched_chunks": len(results)
     }
