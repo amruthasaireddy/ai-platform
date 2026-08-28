@@ -6,9 +6,11 @@ annotated-types==0.8.0
 anyio==4.14.2
 attrs==26.1.0
 certifi==2026.7.22
+cffi==2.1.1
 charset-normalizer==3.5.1
 click==8.4.2
 colorama==0.4.6
+cryptography==50.0.1
 distro==1.9.0
 faiss-cpu==1.15.0
 fastapi==0.141.1
@@ -44,9 +46,13 @@ orjson==3.12.0
 ormsgpack==1.12.2
 packaging==26.3
 propcache==0.5.2
+pycparser==3.0
 pydantic==2.13.4
 pydantic-settings==2.15.0
 pydantic_core==2.46.4
+PyGithub==2.10.0
+PyJWT==2.13.0
+PyNaCl==1.6.2
 pypdf==6.16.1
 python-dotenv==1.2.3
 python-multipart==0.0.32
