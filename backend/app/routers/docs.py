@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_community.vectorstores import FAISS
 
 router = APIRouter()
@@ -13,7 +13,9 @@ router = APIRouter()
 UPLOAD_DIR = "uploads"
 VECTORSTORE_DIR = "vectorstore/faiss_index"
 
+
 embeddings = OpenAIEmbeddings()
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 
 @router.get("/ping")
